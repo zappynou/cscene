@@ -1,0 +1,66 @@
+#ifndef __CSCENE__VERSION_H_
+#define __CSCENE__VERSION_H_
+
+#include <stdint.h>
+
+/**
+ * @brief Get the major version of the cscene headers.
+ *
+ * @return The major version of the library. This call cannot fail.
+ */
+#define cscene_get_build_major() ((uint32_t)(@PACKAGE_VERSION_MAJOR@))
+
+/**
+ * @brief Get the minor version of the cscene library in use.
+ *
+ * @return The minor version of the library. This call cannot fail.
+ */
+#define cscene_get_build_minor() ((uint16_t)(@PACKAGE_VERSION_MINOR@))
+
+/**
+ * @brief Get the revision version of the cscene library in use.
+ *
+ * @return The revision version of the library. This call cannot fail.
+ */
+#define cscene_get_build_revision() ((uint16_t)(@PACKAGE_VERSION_REVISION@))
+
+/**
+ * @brief Get the version string representation of the cscene library in use.
+ *
+ * @return A pointer to the version string representation of the library.
+ * This call cannot fail. The returned pointer is staticaly allocated and must
+ * not be freed by the user.
+ */
+#define cscene_get_build_string() ("@PACKAGE_VERSION_STRING@")
+
+/**
+ * @brief Get the major version of the cscene library in use.
+ *
+ * @return The major version of the library. This call cannot fail.
+ */
+uint32_t cscene_get_library_major(void);
+
+/**
+ * @brief Get the minor version of the cscene library in use.
+ *
+ * @return The minor version of the library. This call cannot fail.
+ */
+uint16_t cscene_get_library_minor(void);
+
+/**
+ * @brief Get the revision version of the cscene library in use.
+ *
+ * @return The revision version of the library. This call cannot fail.
+ */
+uint16_t cscene_get_library_revision(void);
+
+/**
+ * @brief Get the version string representation of the cscene library in use.
+ *
+ * @return A pointer to the version string representation of the library.
+ * This call cannot fail. The returned pointer is staticaly allocated and must
+ * not be freed by the user.
+ */
+const char *cscene_get_library_string(void);
+
+#endif /* !__CSCENE__VERSION_H_ */

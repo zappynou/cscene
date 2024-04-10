@@ -3,5 +3,23 @@
 .#*
 *#
 
+## Generated build files.
+/aclocal.m4
+/ar-lib
+/*.cache
+/compile
+/config.*
+/configure
+/depcomp
+config.h.in
+/install-sh
+/ltmain.sh
+/m4
+/missing
+Makefile
+Makefile.in
+.libs
+.deps
+
 ## Build directories.
 /*BUILD*
